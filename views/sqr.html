@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<script src="../scripts/timer.js" charset="utf-8"></script>
+	<script src="../scripts/sqr.js" charset="utf-8"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<title>Squares</title>
+</head>
+<body>
+	<div id="sqr-content" class="content">
+		<div id="sqr-header">
+			<h1>The Square Numbers</h1>
+			<p>Each square number is its input multiplied by itself, or in other words, itself to the power of 2.</p>
+			<p class="math">Square(n) = n &middot; n OR n<sup>2</sup></p>
+			<p>The numbers are called "squares" because if you treat the input as the length of a line, the output is the area of a square with that line length.</p>
+
+			<!-- TODO: add following pics:
+				line vs square -->
+			<img src="../img/line-square.png" alt="">
+		</div>
+		<table id="tbl-sqr">
+			<tr id="sqr-headings">
+				<th>Square Generator</th>
+				<th>Square Calculator</th>
+			</tr>
+			<tr id="row-sqr-pos">
+				<td id="sqr-pos">Current Position : 0</td>
+				<td id="csqr-pos">
+					<input type="number" id="num-sqr" placeholder="Base">
+				</td>
+			</tr>
+			<tr id="row-sqr-btn">
+				<td>
+					<input type="button" id="btn-sqr" value="Generate Square" onclick="execSqr()"/>
+				</td>
+				<td>
+					<input type="button" id="btn-csqr" value="Calculate Square" onclick="execCustomSqr()"/>
+				</td>
+			</tr>
+			<tr id="row-sqr-out">
+				<td id="sqr-out"></td>
+				<td id="csqr-out"></td>
+			</tr>
+			<tr id="row-sqr-time">
+				<td id="sqr-time"></td>
+				<td id="csqr-time"></td>
+			</tr>
+		</table>
+	</div>
+	<footer>
+		<a href="../index.html">Back to Home</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+h1 {
+	text-align: center;
+	font-family: "Afta Serif";
+	font-size: 96pt;
+	color: #444444;
+}
+a {
+	font-family: "FuturaExtended";
+	font-size: 48pt;
+}
+#link-container {
+	padding-left: 34vw;
+}

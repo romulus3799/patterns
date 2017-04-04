@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<script src="../scripts/timer.js" charset="utf-8"></script>
+	<script src="../scripts/sqrt.js" charset="utf-8"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<title>Square Roots</title>
+</head>
+	<body>
+		<div id="sqrt-content" class="content">
+			<div id="sqrt-header">
+				<h1>The Square Roots</h1>
+				<p>A square root of a number is a number such that when the number is divided by the square root equals the square root.</p>
+				<p class="math">n &divide; Sqrt(n) = Sqrt(n) OR Sqrt(n) = n<sup>&frac12;</sup></p>
+				<p>Since this is the opposite of squares, the logic is similar. If the input is the area of a square, the output is the length of the square's side.</p>
+				<img src="../img/line-square.png" alt="" height="300px">
+			</div>
+			<table id="tbl-sqrt">
+				<tr id="sqrt-headings">
+					<th>Square Root Generator</th>
+					<th>Square Root Calculator</th>
+				</tr>
+				<tr id="row-sqrt-pos">
+					<td id="sqrt-pos">Current Position : 0</td>
+					<td id="csqrt-pos">
+						<input type="number" id="num-sqrt" placeholder="Base">
+					</td>
+				</tr>
+				<tr id="row-sqrt-btn">
+					<td>
+						<input type="button" id="btn-sqrt" value="Generate Square Root" onclick="execSqrt()"/>
+					</td>
+					<td>
+						<input type="button" id="btn-csqrt" value="Calculate Square Root" onclick="execCustomSqrt()"/>
+					</td>
+				</tr>
+				<tr id="row-sqrt-out">
+					<td id="sqrt-out"></td>
+					<td id="csqrt-out"></td>
+				</tr>
+				<tr id="row-sqrt-time">
+					<td id="sqrt-time"></td>
+					<td id="csqrt-time"></td>
+				</tr>
+			</table>
+		</div>
+		<footer>
+			<a href="../index.html">Back to Home</a>
+		</footer>
+	</body>
+</html>
