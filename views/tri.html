@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<script src="../scripts/timer.js" charset="utf-8"></script>
+	<script src="../scripts/tri.js" charset="utf-8"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<title>Triangles</title>
+</head>
+<body>
+	<div id="tri-content" class="content">
+		<div id="tri-header">
+			<h1>The Triangular Numbers</h1>
+			<p>Triangular numbers are reached by starting with 0 and adding the next whole number any n times. So the first triangular number is 0+1. The next is 0+1+2. Then 0+1+2+3 and so on.</p>
+			<!-- https://wikimedia.org/api/rest_v1/media/math/render/svg/8411fe69f79f2971b7c7a453b0b547bb37e9f6df -->
+			<img src="triangle-equation.png" alt="">
+			<p>The numbers are called "triangles" because if you visualize the addition process, the numbers look like this:</p>
+			<!-- http://world.mathigon.org/Sequences -->
+			<img src="../img/triangles.png" alt="">
+		</div>
+		<table id="tbl-tri">
+			<tr id="tri-headings">
+				<th>Triangle Generator</th>
+				<th>Triangle Calculator</th>
+			</tr>
+			<tr id="row-tri-pos">
+				<td id="tri-pos">Current Position : 0</td>
+				<td id="ctri-pos">
+					<input type="number" id="num-tri" min="Number.MIN_SAFE_INTEGER" max="Number.MAX_SAFE_INTEGER"  placeholder="Base">
+				</td>
+			</tr>
+			<tr id="row-tri-btn">
+				<td>
+					<input type="button" id="btn-tri" value="Generate Square" onclick="execTri()"/>
+				</td>
+				<td>
+					<input type="button" id="btn-ctri" value="Calculate Square" onclick="execCustomTri()"/>
+				</td>
+			</tr>
+			<tr id="row-tri-out">
+				<td id="tri-out"></td>
+				<td id="ctri-out"></td>
+			</tr>
+			<tr id="row-tri-time">
+				<td id="tri-time"></td>
+				<td id="ctri-time"></td>
+			</tr>
+		</table>
+	</div>
+	<footer>
+		<a href="../index.html">Back to Home</a>
+	</footer>
+</body>
+</html>

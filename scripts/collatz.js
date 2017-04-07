@@ -1,3 +1,5 @@
+const SEPARATOR = ' --> '
+
 function* hailstone(startingNum) {
 
 	let n = startingNum,
@@ -20,16 +22,17 @@ function execHail() {
 	let outSequence = []
 	function executeHail() {
 		let iters = 0
-		for(let hail = hailstone($('#collatz-in').val()), h; !(h = hail.next()).done;) {
+		let inp = $('#collatz-in').val() ? $('#collatz-in').val() : 1
+		for(let hail = hailstone(inp), h; !(h = hail.next()).done;) {
 		    outSequence.push(h.value)
 			iters++
 		}
-
 		console.log(outSequence)
-		let outStr = ''
+		let outStr = inp + SEPARATOR
 		for (n of outSequence) {
-			outStr += String(n + ' ')
+			outStr += String(n + SEPARATOR)
 		}
+		outStr = outStr.substring(0,outStr.length-SEPARATOR.length)
 
 		$('#collatz-iters').html('Iterations : ' + iters)
 		$('#collatz-out').html(outStr)
