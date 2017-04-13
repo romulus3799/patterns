@@ -16,28 +16,31 @@
 	<div id="fib-header">
 		<h1>The Fibonacci Sequence</h1>
 		<p>Each number in the sequence is the sum of the two previous numbers in the sequence.</p>
-		<p class="math-text">Fib<sub>n</sub> = Fib<sub>n-1</sub> + Fib<sub>n-2</sub></p>
+		<p class="math">Fib<sub>n</sub> = Fib<sub>n-1</sub> + Fib<sub>n-2</sub></p>
 		<!-- original creation -->
-		<img src="../img/fib-diagram.png" alt="">
+		<img src="../img/fib-diagram.png" height="200px">
 	</div>
-	<div id="fib-content" class="content" layout="row">
-		<div id="fib-gen">
+	<div id="fib-content" class="row">
+		<div id="fib-gen" class="left">
 			<h2>Fibonacci Generator</h2>
 			<p id="fib-pos">Current Position : 0</p>
 			<input type="button" id="btn-fib" value="Generate Fibonacci Number" onclick="execFib()"/>
-			<p id="fib-out"></p>
-			<td id="fib-time"></td>
+			<p id="fib-out">Fib<sub>n</sub> = Fib<sub>n-1</sub> + Fib<sub>n-2</sub></p>
+			<p id="fib-time">Completion Time</p>
 		</div>
-		<div id="fib-calc">
+		<div id="fib-calc" class="right">
 			<h2>Fibonacci Calculator</h2>
 			<input type="number" id="num-fib" min="1" max="Number.MAX_SAFE_INTEGER" placeholder="Position">
+			<p></p>
 			<input type="button" id="btn-cfib" value="Generate Custom Fibonacci Number" onclick="execCustomFib()"/>
-			<p id="cfib-out"></p>
-			<p id="cfib-time"></p>
+			<p id="cfib-out">Fib<sub>n</sub> = Fib<sub>n-1</sub> + Fib<sub>n-2</sub></p>
+			<p id="cfib-time">Completion Time</p>
 		</div>
 	</div>
-	<footer>
-		<a href="../index.html">Back to Home</a>
-	</footer>
+	<div class="row">
+		<footer>
+			<a href="../index.html">Back to Home</a>
+		</footer>
+	</div>
 </body>
 </html>

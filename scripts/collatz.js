@@ -1,4 +1,4 @@
-const SEPARATOR = ' --> '
+const SEPARATOR = ' &rarr; '
 
 function* hailstone(startingNum) {
 

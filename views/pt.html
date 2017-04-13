@@ -9,55 +9,44 @@
 	<script src="../scripts/pt.js" charset="utf-8"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+	<link rel="stylesheet" href="../css/sub.css">
 	<title>Power Tower</title>
 </head>
 	<body>
-		<div id="pt-content" class="content">
-			<table id="pt-content-table">
-				<tr>
-					<td>
-						<div id="pt-header">
-							<h1>The Power Tower (of the 2<sup>nd</sup> order)</h1>
-							<p>Each power tower number is its input to the power of itself. This is an extremely fast-growing function.</p>
-						</div>
-						<table id="tbl-pt">
-							<tr id="pt-headings">
-								<th>PT<sub>2</sub> Generator</th>
-								<th>PT<sub>2</sub> Calculator</th>
-							</tr>
-							<tr id="row-pt-pos">
-								<td id="pt-pos">Current Position : 0</td>
-								<td id="cpt-pos">
-									<input type="number" id="num-pt" min="Number.MIN_SAFE_INTEGER" max="Number.MAX_SAFE_INTEGER" placeholder="Base">
-								</td>
-							</tr>
-							<tr id="row-pt-btn">
-								<td>
-									<input type="button" id="btn-pt" value="Generate PT Number" onclick="execPT()"/>
-								</td>
-								<td>
-									<input type="button" id="btn-cpt" value="Generate Custom PT Number" onclick="execCustomPT()"/>
-								</td>
-							</tr>
-							<tr id="row-pt-out">
-								<td id="pt-out"></td>
-								<td id="cpt-out"></td>
-							</tr>
-							<tr id="row-pt-time">
-								<td id="pt-time"></td>
-								<td id="cpt-time"></td>
-							</tr>
-						</table>
-					</td>
-					<td>
-						<!-- https://www.desmos.com/calculator -->
-						<img src="../img/power-tower-graph.png" alt="" height="600px">
-					</td>
-				</tr>
-			</table>
+		<div class="row">
+			<div>
+				<div id="pt-header" class="row">
+					<h1>The Power Tower (of the 2<sup>nd</sup> order)</h1>
+					<p>Each power tower number is its input to the power of itself. This is an extremely fast-growing function.</p>
+				</div>
+				<div id="pt-content" class="left">
+					<div id="pt-gen">
+						<p>PT<sub>2</sub> Generator</p>
+						<div id="pt-pos">Current Position : 0</div>
+						<input type="button" id="btn-pt" value="Generate PT Number" onclick="execPT()"/>
+						<p id="pt-out">PT(x) = x<sup>x</sup></p>
+						<p id="pt-time">Completion Time</p>
+					</div>
+					<div class="spacer"></div>
+					<div id="pt-calc">
+						<p>PT<sub>2</sub> Calculator</p>
+						<input type="number" id="num-pt" min="Number.MIN_SAFE_INTEGER" max="Number.MAX_SAFE_INTEGER" placeholder="Base">
+						<p></p>
+						<input type="button" id="btn-cpt" value="Generate Custom PT Number" onclick="execCustomPT()"/>
+						<p id="cpt-out">PT(x) = x<sup>x</sup></p>
+						<p id="cpt-time">Completion Time</p>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<!-- https://www.desmos.com/calculator -->
+				<img src="../img/power-tower-graph.png" alt="" height="500px">
+			</div>
 		</div>
-		<footer>
-			<a href="../index.html">Back to Home</a>
-		</footer>
+		<div class="row">
+			<footer>
+				<a href="../index.html">Back to Home</a>
+			</footer>
+		</div>
 	</body>
 </html>
