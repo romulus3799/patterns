@@ -27,6 +27,7 @@ button:hover {
 }
 button:active {
 	background-color: rgb(69, 1, 83);
+	border: none;
 }
 #link-container {
 	padding-left: 34vw;

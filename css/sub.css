@@ -58,4 +58,5 @@ input[type=button]:hover {
 }
 input[type=button]:active {
 	background-color: rgb(69, 1, 83);
+	border: none;
 }

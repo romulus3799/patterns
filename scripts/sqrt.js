@@ -2,31 +2,26 @@ const ACCURACY = 10
 let sqrtPos = 1
 
 function sqrt(x) {
-	let degree = 0,
-	tooHigh = true
-
 	//call recursive helper
-	return sr(x, x, degree, tooHigh)
+	return sr(x, x, 0, true)
 }
 
 //recursive helper
+/*
+This function uses recursion to guess and check a number's sqrt
+
+How it works:
+1	Guess a number, check if it's the root (to x decimal places)
+2	If so, return it
+3	If not, decrement the number until it's too low
+4	Call function with new low number, use smaller increments,
+and increment until the number is too HIGH
+5	Keep calling function, each time with more accurate increments and
+keep switching whether or not to increment or decrement number
+*/
 function sr(guess, base, deg, hi) {
-	/*
-	This function uses recursion to guess and check a number's sqrt
-
-	How it works:
-		1	Guess a number, check if it's the root (to x decimal places)
-		2	If so, return it
-		3	If not, decrement the number until it's too low
-		4	Call function with new low number, use smaller increments,
-			and increment until the number is too HIGH
-		5	Keep calling function, each time with more accurate increments and
-		 	keep switching whether or not to increment or decrement number
-	*/
-
 	//return number if correct
 	if(round(guess*guess) === round(base)) return round(guess)
-
 	//increase or decrease number until it's too high or low
 	if(hi) {
 		while(round(guess*guess) > round(base)) guess -= 1./Math.pow(10,deg)
@@ -34,7 +29,6 @@ function sr(guess, base, deg, hi) {
 	else {
 		while(guess*guess < base) guess += 1./Math.pow(10,deg)
 	}
-
 	//return function with higher degree of accuracy, switch instruction to increment
 	return sr(guess, base, deg+1, !hi)
 }
